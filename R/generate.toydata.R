@@ -4,7 +4,8 @@ function(model="LN-LN") {
 # from the chosen model and estimates the parameters from this data.
 #
 # model can be "LN-LN", "rLN-LN" or "EXP-LN".
-
+  devAskNewPage(FALSE)
+  par(ask = FALSE)
 
    # definition of variables (necessary for CMD R check)
    # (these variables will be initialized later, but they are not visible as global functions/data)
@@ -12,7 +13,6 @@ function(model="LN-LN") {
    d.sum.of.mixtures <- NULL
    rm(r.sum.of.mixtures)
    rm(d.sum.of.mixtures)
-
 
    # model has to be defined
    if (!(model %in% c("LN-LN","rLN-LN","EXP-LN"))) {
