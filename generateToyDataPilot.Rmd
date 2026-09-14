@@ -1,0 +1,32 @@
+---
+title: "Generating Toy Data"
+author: "Wisam"
+date: "2026-09-10"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r SETUP}
+library(numDeriv)
+library(MASS)
+```
+
+
+```{r}
+r_files <- list.files(path = "R", 
+                      pattern = "\\.[Rr]$", 
+                      full.names = TRUE)
+invisible(lapply(r_files, source))
+```
+
+
+```{r}
+generate.toydata(model = "LN-LN")
+```
+
+
+```{r}
+generate.toydata(model = "EXP-LN")
+```
+
